@@ -25,6 +25,7 @@ GET方式
 `
 http://localhost:8080/graphql?query={findAllBooks{title pageCount isbn author{firstName lastName}}}
 `
+
 对原字符串`{findAllBooks{title pageCount isbn author{firstName lastName}}}`进行`UrlEncode`编码
 
 `
@@ -51,16 +52,18 @@ POST方式直接提交json
 }
 `
 
-`Postman`中查询为:
+`Postman`中查询语法为:
 
-`{
+`
+{
     "query":"{findAllBooks {title pageCount isbn author {firstName lastName}}}"
 }`
 
-提交的url仍为`http://localhost:8080/graphql`
+提交的url仍为 http://localhost:8080/graphql
 
 ![](Screenshots/postman_post.png)
 
+操作演示
 
 ![](Screenshots/graphql-postman.gif)
 
